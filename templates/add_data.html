@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container login-page-form">
+        <img id="img" src="/static/assets/ali-yahya-488146-unsplash.jpg" width="480" height="300"/>
+        <label for="img">Photo by Ali Yahya on Unsplash</label>
+        <form id="home" action="/confirm" method="post">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">ชื่อยาสามัญ</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="ชื่อยา">
+            </div>
+            <div class="form-group">
+                <label for="type">ชนิดยา</label>
+                <select class="form-control" id="type" name="type">
+                    <option>ยาเม็ด</option>
+                    <option>ยาน้ำแขวนตะกอน</option>
+                    <option>ยาน้ำเชื่อม</option>
+                    <option>ยาเม็ดชนิดเคี้ยว</option>
+                    <option>แคปซูล</option>
+                    <option>ยาผงแห้ง</option>
+                    <option>ยาหยอดตา</option>
+                    <option>ครีม โลชั่น</option>
+                    <option>ขี้ผึ้ง</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="medicine_for">ยานี้คือ สำหรับอะไร</label>
+                <textarea class="form-control" id="medicine_for" name="medicine_for" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="medicine_for">ข้อควรรู้ก่อนใช้ยา</label>
+                <textarea class="form-control" id="medicine_facts" name="medicine_facts" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="medicine_for">วิธีใช้ยา</label>
+                <textarea class="form-control" id="medicine_use" name="medicine_use" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="medicine_for">อันตรายจากยา</label>
+                <textarea class="form-control" id="medicine_risk" name="medicine_risk" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="medicine_for">การเก็บรักษา</label>
+                <textarea class="form-control" id="medicine_store" name="medicine_store" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="FormControlFile">file input</label>
+                <input type="file" class="form-control-file" name="FormControlFile" id="FormControlFile">
+            </div>
+            <button type="submit" class="btn btn-success">submit</button>
+        </form>
+    </div>
+{% endblock %}

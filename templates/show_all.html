@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <ul class="list-group list-group-flush">
+            {% if medicines | length > 0 %}
+                {% for medicine in medicines %}
+                    <li class="list-group-item">{{ medicine['name'] }}</li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}
